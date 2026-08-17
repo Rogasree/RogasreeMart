@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buyer Login | Rogasree Mart</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+
+    <main class="login-container">
+
+        <!-- Left Welcome Section -->
+        <section class="login-welcome">
+
+            <div class="login-logo">
+                <span>R</span>
+                Rogasree Mart
+            </div>
+
+            <p class="login-label">WELCOME BACK</p>
+
+            <h1>
+                Your shopping journey
+                starts here.
+            </h1>
+
+            <p>
+                Sign in to explore products, save your favorites,
+                and manage your shopping cart.
+            </p>
+
+        </section>
+
+
+        <!-- Login Form -->
+        <section class="login-card">
+
+            <a href="index.html" class="back-link">
+                ← Back to roles
+            </a>
+
+            <h2>Buyer Login</h2>
+
+            <p class="login-subtitle">
+                Enter your details to continue shopping.
+            </p>
+
+            <form id="buyerLoginForm">
+
+                <!-- Email -->
+                <div class="input-group">
+                    <label for="email">Email or Phone Number</label>
+
+                    <input
+                        type="text"
+                        id="email"
+                        placeholder="Enter your email or phone"
+                    >
+                </div>
+
+
+                <!-- Password -->
+                <div class="input-group">
+
+                    <label for="password">Password</label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                        >
+
+                        <button
+                            type="button"
+                            id="showPassword"
+                        >
+                            Show
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Remember + Forgot -->
+                <div class="login-options">
+
+                    <label class="remember">
+                        <input type="checkbox" id="remember">
+                        Remember me
+                    </label>
+
+                    <a href="#" onclick="forgotPassword(event)">
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+                <!-- Login Button -->
+                <button type="button" onclick="checkLogin(event)">login</button>
+                </button>
+
+
+                <!-- Demo Message -->
+                <p id="loginMessage" class="login-message"></p>
+
+            </form>
+
+
+            <!-- Divider -->
+            <div class="divider">
+                <span>or continue with</span>
+            </div>
+
+
+            <!-- Social Login -->
+            <div class="social-buttons">
+
+                <button type="button" onclick="demoSocialLogin('Google')">
+                    Continue with Google
+                </button>
+
+                <button type="button" onclick="demoSocialLogin('Apple')">
+                    Continue with Apple
+                </button>
+
+            </div>
+
+
+            <!-- Signup -->
+            <p class="signup-text">
+                Don't have an account?
+                <a href="register.html">Sign up</a>
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+    <script>
+function checkLogin() {
+
+    const registeredUser = localStorage.getItem("rogasreeUser");
+
+    if (!registeredUser) {
+        alert("Please register first.");
+        window.location.href = "register.html";
+        return;
+    }
+
+    const user = JSON.parse(registeredUser);
+
+    const emailInput = document.querySelector('input[type="email"]');
+
+    if (!emailInput) {
+        alert("Email field not found.");
+        return;
+    }
+
+    const enteredEmail = emailInput.value.trim().toLowerCase();
+
+    if (enteredEmail !== user.email.toLowerCase()) {
+        alert("This email is not registered.");
+        return;
+    }
+
+    alert("Login successful!");
+    window.location.href = "home.html";
+}
+</script>
+
+
+
+
+</body>
+</html>

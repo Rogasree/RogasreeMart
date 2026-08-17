@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | Rogasree Mart</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="admin-login-page">
+
+    <main class="admin-login-container">
+
+        <!-- Admin Information -->
+        <section class="admin-intro">
+
+            <a href="index.html" class="admin-brand">
+                <span>R</span>
+                Rogasree Mart
+            </a>
+
+            <div class="security-icon">
+                🔐
+            </div>
+
+            <p class="admin-label">ADMINISTRATION PORTAL</p>
+
+            <h1>
+                Manage the marketplace
+                with confidence.
+            </h1>
+
+            <p>
+                Access marketplace controls, monitor activity,
+                manage accounts and review platform performance.
+            </p>
+
+            <div class="admin-security-note">
+                <strong>Protected demo area</strong>
+                <br>
+                This frontend project does not use real authentication.
+            </div>
+
+        </section>
+
+
+        <!-- Admin Login Form -->
+        <section class="admin-login-card">
+
+            <a href="index.html" class="admin-back">
+                ← Back to role selection
+            </a>
+
+            <p class="admin-small-title">SECURE ACCESS</p>
+
+            <h2>Admin Login</h2>
+
+            <p class="admin-subtitle">
+                Sign in to access the administration dashboard.
+            </p>
+
+
+            <form id="adminLoginForm">
+
+                <!-- Email -->
+                <div class="admin-input-group">
+
+                    <label for="adminEmail">
+                        Admin Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="adminEmail"
+                        placeholder="admin@example.com"
+                    >
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="admin-input-group">
+
+                    <label for="adminPassword">
+                        Password
+                    </label>
+
+                    <div class="admin-password-box">
+
+                        <input
+                            type="password"
+                            id="adminPassword"
+                            placeholder="Enter your password"
+                        >
+
+                        <button
+                            type="button"
+                            id="adminShowPassword"
+                        >
+                            Show
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Options -->
+                <div class="admin-options">
+
+                    <label>
+                        <input type="checkbox">
+                        Remember me
+                    </label>
+
+                    <a href="#" onclick="adminForgotPassword(event)">
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+                <!-- Login -->
+                <button
+                    type="submit"
+                    class="admin-login-button"
+                >
+                    Access Dashboard
+                </button>
+
+
+                <p id="adminMessage" class="admin-message"></p>
+
+            </form>
+
+
+            <div class="admin-demo-note">
+                <span>ⓘ</span>
+                Demo authentication only — no real credentials
+                are stored or verified.
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

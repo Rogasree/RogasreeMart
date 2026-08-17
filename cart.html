@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Seller Dashboard | Rogasree Mart</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="seller-dashboard-page">
+
+    <!-- Dashboard Header -->
+    <header class="seller-dashboard-header">
+
+        <a href="seller-dashboard.html" class="dashboard-brand">
+            <span>R</span>
+            Rogasree Mart
+        </a>
+
+        <div class="dashboard-header-right">
+
+            <span class="seller-welcome">
+                Welcome, Seller
+            </span>
+
+            <button
+                class="dashboard-profile"
+                onclick="showSellerProfile()"
+            >
+                👤
+            </button>
+
+            <a href="index.html" class="logout-button">
+                Logout
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <div class="seller-dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="seller-sidebar">
+
+            <p class="sidebar-title">
+                SELLER CENTRE
+            </p>
+
+            <button
+                class="sidebar-item active"
+                onclick="showSellerSection('overview')"
+            >
+                📊 Dashboard
+            </button>
+
+            <button
+                class="sidebar-item"
+                onclick="showSellerSection('products')"
+            >
+                📦 Products
+            </button>
+
+            <button
+                class="sidebar-item"
+                onclick="showSellerSection('orders')"
+            >
+                🛍️ Orders
+            </button>
+
+            <button
+                class="sidebar-item"
+                onclick="showSellerSection('sales')"
+            >
+                📈 Sales
+            </button>
+
+            <button
+                class="sidebar-item"
+                onclick="showSellerSection('profile')"
+            >
+                👤 Seller Profile
+            </button>
+
+        </aside>
+
+
+        <!-- Main Dashboard -->
+        <main class="seller-dashboard-main">
+
+            <!-- Overview -->
+            <section id="sellerOverview" class="seller-section">
+
+                <div class="dashboard-heading">
+
+                    <div>
+                        <p>SELLER CENTRE</p>
+
+                        <h1>
+                            Store overview
+                        </h1>
+
+                        <span>
+                            Here's how your store is doing today.
+                        </span>
+                    </div>
+
+                    <button
+                        class="add-product-button"
+                        onclick="addSellerProduct()"
+                    >
+                        + Add Product
+                    </button>
+
+                </div>
+
+
+                <!-- Statistics -->
+                <div class="seller-stat-grid">
+
+                    <div class="seller-stat-card">
+
+                        <div class="stat-icon">
+                            📦
+                        </div>
+
+                        <p>Total Products</p>
+
+                        <h2>48</h2>
+
+                        <span class="stat-positive">
+                            ↑ 8% this month
+                        </span>
+
+                    </div>
+
+
+                    <div class="seller-stat-card">
+
+                        <div class="stat-icon">
+                            🛒
+                        </div>
+
+                        <p>Total Orders</p>
+
+                        <h2>126</h2>
+
+                        <span class="stat-positive">
+                            ↑ 12% this month
+                        </span>
+
+                    </div>
+
+
+                    <div class="seller-stat-card">
+
+                        <div class="stat-icon">
+                            ₹
+                        </div>
+
+                        <p>Total Sales</p>
+
+                        <h2>₹84,500</h2>
+
+                        <span class="stat-positive">
+                            ↑ 15% this month
+                        </span>
+
+                    </div>
+
+
+                    <div class="seller-stat-card">
+
+                        <div class="stat-icon">
+                            💰
+                        </div>
+
+                        <p>Revenue</p>
+
+                        <h2>₹72,350</h2>
+
+                        <span class="stat-positive">
+                            ↑ 10% this month
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Recent Orders -->
+                <div class="seller-content-card">
+
+                    <div class="card-heading">
+
+                        <div>
+                            <p>STORE ACTIVITY</p>
+                            <h2>Recent orders</h2>
+                        </div>
+
+                        <button onclick="showSellerOrders()">
+                            View all
+                        </button>
+
+                    </div>
+
+
+                    <div class="seller-table-wrapper">
+
+                        <table class="seller-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Product</th>
+                                    <th>Customer</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>#RM1025</td>
+                                    <td>Wireless Headphones</td>
+                                    <td>Customer 01</td>
+                                    <td>₹1,499</td>
+                                    <td>
+                                        <span class="status delivered">
+                                            Delivered
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#RM1024</td>
+                                    <td>Classic Handbag</td>
+                                    <td>Customer 02</td>
+                                    <td>₹1,299</td>
+                                    <td>
+                                        <span class="status pending">
+                                            Pending
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#RM1023</td>
+                                    <td>Smart Watch</td>
+                                    <td>Customer 03</td>
+                                    <td>₹2,499</td>
+                                    <td>
+                                        <span class="status shipped">
+                                            Shipped
+                                        </span>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Top Products -->
+                <div class="seller-content-card">
+
+                    <div class="card-heading">
+
+                        <div>
+                            <p>BEST PERFORMERS</p>
+                            <h2>Top products</h2>
+                        </div>
+
+                    </div>
+
+
+                    <div class="top-product-list">
+
+                        <div class="top-product">
+                            <span class="top-product-icon">🎧</span>
+
+                            <div>
+                                <h3>Wireless Headphones</h3>
+                                <p>42 orders</p>
+                            </div>
+
+                            <strong>₹62,958</strong>
+                        </div>
+
+
+                        <div class="top-product">
+                            <span class="top-product-icon">⌚</span>
+
+                            <div>
+                                <h3>Smart Watch</h3>
+                                <p>31 orders</p>
+                            </div>
+
+                            <strong>₹77,469</strong>
+                        </div>
+
+
+                        <div class="top-product">
+                            <span class="top-product-icon">👜</span>
+
+                            <div>
+                                <h3>Classic Handbag</h3>
+                                <p>26 orders</p>
+                            </div>
+
+                            <strong>₹33,774</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Products Section -->
+            <section
+                id="sellerProducts"
+                class="seller-section hidden-section"
+            >
+
+                <div class="dashboard-heading">
+
+                    <div>
+                        <p>CATALOGUE</p>
+                        <h1>Product management</h1>
+                        <span>Manage products in your store.</span>
+                    </div>
+
+                    <button
+                        class="add-product-button"
+                        onclick="addSellerProduct()"
+                    >
+                        + Add Product
+                    </button>
+
+                </div>
+
+
+                <div class="seller-content-card">
+
+                    <div class="seller-product-row">
+
+                        <span class="seller-product-image">🎧</span>
+
+                        <div>
+                            <h3>Wireless Headphones</h3>
+                            <p>Electronics · ₹1,499</p>
+                        </div>
+
+                        <span class="stock-label">
+                            25 in stock
+                        </span>
+
+                        <button onclick="editSellerProduct()">
+                            Edit
+                        </button>
+
+                        <button onclick="deleteSellerProduct()">
+                            Delete
+                        </button>
+
+                    </div>
+
+
+                    <div class="seller-product-row">
+
+                        <span class="seller-product-image">👟</span>
+
+                        <div>
+                            <h3>Everyday Sneakers</h3>
+                            <p>Fashion · ₹1,899</p>
+                        </div>
+
+                        <span class="stock-label">
+                            18 in stock
+                        </span>
+
+                        <button onclick="editSellerProduct()">
+                            Edit
+                        </button>
+
+                        <button onclick="deleteSellerProduct()">
+                            Delete
+                        </button>
+
+                    </div>
+
+
+                    <div class="seller-product-row">
+
+                        <span class="seller-product-image">👜</span>
+
+                        <div>
+                            <h3>Classic Handbag</h3>
+                            <p>Accessories · ₹1,299</p>
+                        </div>
+
+                        <span class="stock-label">
+                            12 in stock
+                        </span>
+
+                        <button onclick="editSellerProduct()">
+                            Edit
+                        </button>
+
+                        <button onclick="deleteSellerProduct()">
+                            Delete
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Orders Section -->
+            <section
+                id="sellerOrders"
+                class="seller-section hidden-section"
+            >
+
+                <div class="dashboard-heading">
+
+                    <div>
+                        <p>ORDERS</p>
+                        <h1>Order management</h1>
+                        <span>Track your customer orders.</span>
+                    </div>
+
+                </div>
+
+
+                <div class="seller-content-card">
+
+                    <div class="order-management-item">
+                        <strong>#RM1025</strong>
+
+                        <span>
+                            Wireless Headphones
+                        </span>
+
+                        <strong>₹1,499</strong>
+
+                        <span class="status delivered">
+                            Delivered
+                        </span>
+                    </div>
+
+
+                    <div class="order-management-item">
+                        <strong>#RM1024</strong>
+
+                        <span>
+                            Classic Handbag
+                        </span>
+
+                        <strong>₹1,299</strong>
+
+                        <span class="status pending">
+                            Pending
+                        </span>
+                    </div>
+
+
+                    <div class="order-management-item">
+                        <strong>#RM1023</strong>
+
+                        <span>
+                            Smart Watch
+                        </span>
+
+                        <strong>₹2,499</strong>
+
+                        <span class="status shipped">
+                            Shipped
+                        </span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Sales Section -->
+            <section
+                id="sellerSales"
+                class="seller-section hidden-section"
+            >
+
+                <div class="dashboard-heading">
+
+                    <div>
+                        <p>PERFORMANCE</p>
+                        <h1>Sales overview</h1>
+                        <span>Review your store performance.</span>
+                    </div>
+
+                </div>
+
+
+                <div class="seller-content-card sales-card">
+
+                    <h2>Monthly sales</h2>
+
+                    <div class="sales-placeholder">
+
+                        <span>₹84,500</span>
+
+                        <p>
+                            Demo sales analytics
+                        </p>
+
+                        <div class="sales-bars">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Profile Section -->
+            <section
+                id="sellerProfile"
+                class="seller-section hidden-section"
+            >
+
+                <div class="dashboard-heading">
+
+                    <div>
+                        <p>ACCOUNT</p>
+                        <h1>Seller profile</h1>
+                        <span>Manage your store information.</span>
+                    </div>
+
+                </div>
+
+
+                <div class="seller-content-card profile-card">
+
+                    <div class="profile-avatar">
+                        🏪
+                    </div>
+
+                    <h2>Rogasree Store</h2>
+
+                    <p>seller@example.com</p>
+
+                    <p>
+                        This is sample seller information
+                        for the frontend demo.
+                    </p>
+
+                    <button onclick="showSellerProfile()">
+                        Edit Profile
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

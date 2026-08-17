@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Rogasree Mart</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="admin-dashboard-page">
+
+    <!-- Header -->
+    <header class="admin-header">
+
+        <a href="admin-dashboard.html" class="admin-brand">
+            <span>R</span>
+            Rogasree Mart
+        </a>
+
+        <div class="admin-header-right">
+
+            <span class="admin-welcome">
+                Admin Panel
+            </span>
+
+            <button
+                class="admin-profile-button"
+                onclick="showAdminProfile()">
+                👤
+            </button>
+
+            <a href="index.html" class="admin-logout">
+                Logout
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- Dashboard Layout -->
+    <div class="admin-layout">
+
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+
+            <p class="admin-sidebar-title">
+                ADMIN CONTROL
+            </p>
+
+            <button
+                class="admin-menu active"
+                onclick="showAdminSection('overview')">
+                📊 Overview
+            </button>
+
+            <button
+                class="admin-menu"
+                onclick="showAdminSection('users')">
+                👥 Users
+            </button>
+
+            <button
+                class="admin-menu"
+                onclick="showAdminSection('sellers')">
+                🏪 Sellers
+            </button>
+
+            <button
+                class="admin-menu"
+                onclick="showAdminSection('products')">
+                📦 Products
+            </button>
+
+            <button
+                class="admin-menu"
+                onclick="showAdminSection('orders')">
+                🛒 Orders
+            </button>
+
+            <button
+                class="admin-menu"
+                onclick="showAdminSection('reports')">
+                📈 Reports
+            </button>
+
+            <button
+                class="admin-menu"
+                onclick="showAdminSection('profile')">
+                ⚙️ Admin Profile
+            </button>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="admin-main">
+
+
+            <!-- OVERVIEW -->
+            <section
+                id="adminOverview"
+                class="admin-section">
+
+                <div class="admin-heading">
+
+                    <div>
+                        <p>ADMIN CONTROL</p>
+
+                        <h1>
+                            Marketplace overview
+                        </h1>
+
+                        <span>
+                            Monitor your marketplace activity.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- Statistics -->
+                <div class="admin-stat-grid">
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon">
+                            👥
+                        </div>
+
+                        <p>Total Users</p>
+
+                        <h2>1,248</h2>
+
+                        <span>
+                            ↑ 12% this month
+                        </span>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon">
+                            🏪
+                        </div>
+
+                        <p>Total Sellers</p>
+
+                        <h2>86</h2>
+
+                        <span>
+                            ↑ 7% this month
+                        </span>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon">
+                            📦
+                        </div>
+
+                        <p>Total Products</p>
+
+                        <h2>3,482</h2>
+
+                        <span>
+                            ↑ 15% this month
+                        </span>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon">
+                            🛒
+                        </div>
+
+                        <p>Total Orders</p>
+
+                        <h2>5,724</h2>
+
+                        <span>
+                            ↑ 18% this month
+                        </span>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon">
+                            ₹
+                        </div>
+
+                        <p>Total Revenue</p>
+
+                        <h2>₹18.6L</h2>
+
+                        <span>
+                            ↑ 21% this month
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Recent Activity -->
+                <div class="admin-content-card">
+
+                    <div class="admin-card-heading">
+
+                        <div>
+                            <p>MARKETPLACE ACTIVITY</p>
+
+                            <h2>
+                                Recent activity
+                            </h2>
+                        </div>
+
+                        <button onclick="showAdminSection('orders')">
+                            View orders
+                        </button>
+
+                    </div>
+
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Activity</th>
+                                    <th>User</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>#1001</td>
+                                    <td>New order placed</td>
+                                    <td>Customer 01</td>
+                                    <td>13 Aug 2026</td>
+                                    <td>
+                                        <span class="admin-status success">
+                                            Completed
+                                        </span>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>#1002</td>
+                                    <td>New seller registered</td>
+                                    <td>Seller 24</td>
+                                    <td>13 Aug 2026</td>
+                                    <td>
+                                        <span class="admin-status pending">
+                                            Review
+                                        </span>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>#1003</td>
+                                    <td>Product added</td>
+                                    <td>Seller 18</td>
+                                    <td>12 Aug 2026</td>
+                                    <td>
+                                        <span class="admin-status success">
+                                            Approved
+                                        </span>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- USERS -->
+            <section
+                id="adminUsers"
+                class="admin-section hidden-admin-section">
+
+                <div class="admin-heading">
+
+                    <div>
+                        <p>USER MANAGEMENT</p>
+
+                        <h1>
+                            Users
+                        </h1>
+
+                        <span>
+                            Manage marketplace customers.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-content-card">
+
+                    <div class="admin-user-row">
+
+                        <div class="admin-avatar">
+                            👤
+                        </div>
+
+                        <div>
+                            <h3>Customer One</h3>
+                            <p>customer1@example.com</p>
+                        </div>
+
+                        <span class="admin-user-role">
+                            Buyer
+                        </span>
+
+                        <button onclick="manageAdminUser()">
+                            Manage
+                        </button>
+
+                    </div>
+
+
+                    <div class="admin-user-row">
+
+                        <div class="admin-avatar">
+                            👤
+                        </div>
+
+                        <div>
+                            <h3>Customer Two</h3>
+                            <p>customer2@example.com</p>
+                        </div>
+
+                        <span class="admin-user-role">
+                            Buyer
+                        </span>
+
+                        <button onclick="manageAdminUser()">
+                            Manage
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SELLERS -->
+            <section
+                id="adminSellers"
+                class="admin-section hidden-admin-section">
+
+                <div class="admin-heading">
+
+                    <div>
+                        <p>SELLER MANAGEMENT</p>
+
+                        <h1>
+                            Sellers
+                        </h1>
+
+                        <span>
+                            Review and manage marketplace sellers.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-content-card">
+
+                    <div class="admin-user-row">
+
+                        <div class="admin-avatar store">
+                            🏪
+                        </div>
+
+                        <div>
+                            <h3>Rogasree Store</h3>
+                            <p>seller@example.com</p>
+                        </div>
+
+                        <span class="admin-user-role">
+                            Active
+                        </span>
+
+                        <button onclick="manageAdminSeller()">
+                            Manage
+                        </button>
+
+                    </div>
+
+
+                    <div class="admin-user-row">
+
+                        <div class="admin-avatar store">
+                            🏪
+                        </div>
+
+                        <div>
+                            <h3>Green Basket</h3>
+                            <p>green@example.com</p>
+                        </div>
+
+                        <span class="admin-user-role">
+                            Active
+                        </span>
+
+                        <button onclick="manageAdminSeller()">
+                            Manage
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PRODUCTS -->
+            <section
+                id="adminProducts"
+                class="admin-section hidden-admin-section">
+
+                <div class="admin-heading">
+
+                    <div>
+                        <p>PRODUCT MANAGEMENT</p>
+
+                        <h1>
+                            Products
+                        </h1>
+
+                        <span>
+                            Review marketplace products.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-content-card">
+
+                    <div class="admin-product-row">
+
+                        <span class="admin-product-icon">
+                            🎧
+                        </span>
+
+                        <div>
+                            <h3>Wireless Headphones</h3>
+                            <p>Electronics · ₹1,499</p>
+                        </div>
+
+                        <span>
+                            Approved
+                        </span>
+
+                        <button onclick="manageAdminProduct()">
+                            Manage
+                        </button>
+
+                    </div>
+
+
+                    <div class="admin-product-row">
+
+                        <span class="admin-product-icon">
+                            👟
+                        </span>
+
+                        <div>
+                            <h3>Everyday Sneakers</h3>
+                            <p>Fashion · ₹1,899</p>
+                        </div>
+
+                        <span>
+                            Approved
+                        </span>
+
+                        <button onclick="manageAdminProduct()">
+                            Manage
+                        </button>
+
+                    </div>
+
+
+                    <div class="admin-product-row">
+
+                        <span class="admin-product-icon">
+                            ⌚
+                        </span>
+
+                        <div>
+                            <h3>Smart Watch</h3>
+                            <p>Electronics · ₹2,499</p>
+                        </div>
+
+                        <span>
+                            Pending
+                        </span>
+
+                        <button onclick="manageAdminProduct()">
+                            Manage
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ORDERS -->
+            <section
+                id="adminOrders"
+                class="admin-section hidden-admin-section">
+
+                <div class="admin-heading">
+
+                    <div>
+                        <p>ORDER MANAGEMENT</p>
+
+                        <h1>
+                            Orders
+                        </h1>
+
+                        <span>
+                            Monitor all marketplace orders.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-content-card">
+
+                    <div class="admin-order-row">
+
+                        <strong>#RM1025</strong>
+
+                        <span>
+                            Wireless Headphones
+                        </span>
+
+                        <strong>
+                            ₹1,499
+                        </strong>
+
+                        <span class="admin-status success">
+                            Delivered
+                        </span>
+
+                    </div>
+
+
+                    <div class="admin-order-row">
+
+                        <strong>#RM1024</strong>
+
+                        <span>
+                            Classic Handbag
+                        </span>
+
+                        <strong>
+                            ₹1,299
+                        </strong>
+
+                        <span class="admin-status pending">
+                            Pending
+                        </span>
+
+                    </div>
+
+
+                    <div class="admin-order-row">
+
+                        <strong>#RM1023</strong>
+
+                        <span>
+                            Smart Watch
+                        </span>
+
+                        <strong>
+                            ₹2,499
+                        </strong>
+
+                        <span class="admin-status shipped">
+                            Shipped
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- REPORTS -->
+            <section
+                id="adminReports"
+                class="admin-section hidden-admin-section">
+
+                <div class="admin-heading">
+
+                    <div>
+                        <p>ANALYTICS</p>
+
+                        <h1>
+                            Reports & Analytics
+                        </h1>
+
+                        <span>
+                            Review marketplace performance.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-content-card">
+
+                    <div class="admin-report">
+
+                        <h2>
+                            Revenue overview
+                        </h2>
+
+                        <strong>
+                            ₹18.6L
+                        </strong>
+
+                        <p>
+                            Demo analytics for the capstone project.
+                        </p>
+
+                        <div class="admin-chart">
+
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PROFILE -->
+            <section
+                id="adminProfile"
+                class="admin-section hidden-admin-section">
+
+                <div class="admin-heading">
+
+                    <div>
+                        <p>ACCOUNT</p>
+
+                        <h1>
+                            Admin Profile
+                        </h1>
+
+                        <span>
+                            Manage administrator information.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-content-card admin-profile-card">
+
+                    <div class="admin-large-avatar">
+                        🛡️
+                    </div>
+
+                    <h2>
+                        Marketplace Administrator
+                    </h2>
+
+                    <p>
+                        admin@rogasreemart.com
+                    </p>
+
+                    <p>
+                        Demo administrator account for
+                        the frontend project.
+                    </p>
+
+                    <button onclick="showAdminProfile()">
+                        Edit Profile
+                    </button>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

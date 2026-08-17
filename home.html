@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home | Rogasree Mart</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="home-page">
+
+    <!-- Navigation -->
+    <header class="shop-navbar">
+
+        <a href="home.html" class="shop-logo">
+            <span>R</span>
+            Rogasree Mart
+        </a>
+
+        <nav class="shop-nav-links">
+            <a href="home.html" class="active">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#products">Products</a>
+            <a href="#offers">Offers</a>
+        </nav>
+
+        <div class="shop-actions">
+
+            <button type="button" title="Search">
+                🔍
+            </button>
+
+            <button type="button" title="Wishlist">
+                ♡
+            </button>
+
+            <button type="button" title="Cart">
+                🛒
+            </button>
+
+            <button type="button" title="Profile">
+                👤
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- Hero Section -->
+    <main>
+
+        <section class="shop-hero">
+
+            <div class="hero-content">
+
+                <p class="hero-label">
+                    A BETTER WAY TO SHOP
+                </p>
+
+                <h1>
+                    Find things you'll
+                    <span>love to own.</span>
+                </h1>
+
+                <p>
+                    Explore thoughtfully selected products across
+                    fashion, technology, home, beauty and more.
+                </p>
+
+                <button
+                    class="shop-now-button"
+                    onclick="scrollToProducts()"
+                >
+                    Shop Now →
+                </button>
+
+            </div>
+
+
+            <div class="hero-visual">
+
+                <div class="hero-circle">
+                    <span>🛍️</span>
+                </div>
+
+                <div class="floating-card card-one">
+                    ✨ New arrivals
+                </div>
+
+                <div class="floating-card card-two">
+                    ★ 4.8 rated
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Categories -->
+        <section id="categories" class="shop-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p>EXPLORE</p>
+                    <h2>Shop by category</h2>
+                </div>
+
+                <span>
+                    Find something for every part of your day.
+                </span>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <div class="category-card">
+                    <div>👗</div>
+                    <h3>Fashion</h3>
+                    <p>Style for every occasion</p>
+                </div>
+
+                <div class="category-card">
+                    <div>💻</div>
+                    <h3>Electronics</h3>
+                    <p>Smart tech & essentials</p>
+                </div>
+
+                <div class="category-card">
+                    <div>🏠</div>
+                    <h3>Home</h3>
+                    <p>Make your space beautiful</p>
+                </div>
+
+                <div class="category-card">
+                    <div>✨</div>
+                    <h3>Beauty</h3>
+                    <p>Everyday care & beauty</p>
+                </div>
+
+                <div class="category-card">
+                    <div>👜</div>
+                    <h3>Accessories</h3>
+                    <p>Little things that matter</p>
+                </div>
+
+                <div class="category-card">
+                    <div>⚽</div>
+                    <h3>Sports</h3>
+                    <p>Move with confidence</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Featured Products -->
+        <section id="products" class="shop-section products-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p>CURATED FOR YOU</p>
+                    <h2>Featured products</h2>
+                </div>
+
+                <button
+                    class="view-all-button"
+                    onclick="showAllProducts()"
+                >
+                    View all →
+                </button>
+
+            </div>
+
+
+            <div class="product-grid">
+
+                <!-- Product 1 -->
+                <article class="product-card">
+
+                    <div class="product-image">
+                        🎧
+
+                        <button
+                            class="wishlist-button"
+                            onclick="toggleWishlist(this)"
+                        >
+                            ♡
+                        </button>
+
+                        <span class="product-badge">
+                            NEW
+                        </span>
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Electronics
+                        </p>
+
+                        <h3>Wireless Headphones</h3>
+
+                        <p class="product-description">
+                            Comfortable audio for everyday listening.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <strong>₹1,499</strong>
+
+                            <span>★ 4.8</span>
+
+                        </div>
+
+                        <button
+                            class="add-cart-button"
+                            onclick="addToCart('Wireless Headphones', 1499)"
+                        >
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Product 2 -->
+                <article class="product-card">
+
+                    <div class="product-image">
+                        👟
+
+                        <button
+                            class="wishlist-button"
+                            onclick="toggleWishlist(this)"
+                        >
+                            ♡
+                        </button>
+
+                        <span class="product-badge">
+                            POPULAR
+                        </span>
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Fashion
+                        </p>
+
+                        <h3>Everyday Sneakers</h3>
+
+                        <p class="product-description">
+                            Lightweight shoes made for daily comfort.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <strong>₹1,899</strong>
+
+                            <span>★ 4.7</span>
+
+                        </div>
+
+                        <button
+                            class="add-cart-button"
+                            onclick="addToCart('Everyday Sneakers', 1899)"
+                        >
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Product 3 -->
+                <article class="product-card">
+
+                    <div class="product-image">
+                        👜
+
+                        <button
+                            class="wishlist-button"
+                            onclick="toggleWishlist(this)"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Accessories
+                        </p>
+
+                        <h3>Classic Handbag</h3>
+
+                        <p class="product-description">
+                            A simple and elegant everyday companion.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <strong>₹1,299</strong>
+
+                            <span>★ 4.6</span>
+
+                        </div>
+
+                        <button
+                            class="add-cart-button"
+                            onclick="addToCart('Classic Handbag', 1299)"
+                        >
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Product 4 -->
+                <article class="product-card">
+
+                    <div class="product-image">
+                        ⌚
+
+                        <button
+                            class="wishlist-button"
+                            onclick="toggleWishlist(this)"
+                        >
+                            ♡
+                        </button>
+
+                        <span class="product-badge">
+                            OFFER
+                        </span>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Electronics
+                        </p>
+
+                        <h3>Smart Watch</h3>
+
+                        <p class="product-description">
+                            Track your day with a stylish smart watch.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <strong>₹2,499</strong>
+
+                            <span>★ 4.9</span>
+
+                        </div>
+
+                        <button
+                            class="add-cart-button"
+                            onclick="addToCart('Smart Watch', 2499)"
+                        >
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Special Offer -->
+        <section id="offers" class="offer-section">
+
+            <div>
+
+                <p>LIMITED TIME</p>
+
+                <h2>
+                    A little something
+                    extra for you.
+                </h2>
+
+                <span>
+                    Get up to 30% off selected products.
+                </span>
+
+            </div>
+
+            <button onclick="showOffer()">
+                Explore Offers →
+            </button>
+
+        </section>
+
+
+        <!-- New Arrivals -->
+        <section class="shop-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p>JUST IN</p>
+                    <h2>New arrivals</h2>
+                </div>
+
+            </div>
+
+
+            <div class="new-arrival-grid">
+
+                <div class="arrival-item">
+                    <span>🌸</span>
+                    <div>
+                        <h3>Beauty Essentials</h3>
+                        <p>Fresh picks for your routine</p>
+                    </div>
+                </div>
+
+                <div class="arrival-item">
+                    <span>🎒</span>
+                    <div>
+                        <h3>Travel Collection</h3>
+                        <p>Ready for your next journey</p>
+                    </div>
+                </div>
+
+                <div class="arrival-item">
+                    <span>🕯️</span>
+                    <div>
+                        <h3>Home Collection</h3>
+                        <p>Small details, beautiful spaces</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="shop-footer">
+
+        <div>
+
+            <a href="home.html" class="footer-logo">
+                <span>R</span>
+                Rogasree Mart
+            </a>
+
+            <p>
+                Your everyday marketplace for products
+                you'll love.
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <a href="#categories">Categories</a>
+            <a href="#products">Products</a>
+            <a href="#offers">Offers</a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 Rogasree Mart
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Seller Login | Rogasree Mart</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="seller-login-page">
+
+    <main class="seller-login-container">
+
+        <!-- Seller Introduction -->
+        <section class="seller-intro">
+
+            <a href="index.html" class="seller-brand">
+                <span>R</span>
+                Rogasree Mart
+            </a>
+
+            <p class="seller-label">SELLER CENTRE</p>
+
+            <h1>
+                Grow your store.
+                Reach more customers.
+            </h1>
+
+            <p>
+                Manage your products, track orders and build
+                your marketplace presence from one simple dashboard.
+            </p>
+
+            <div class="seller-points">
+                <div>✓ Product management</div>
+                <div>✓ Order tracking</div>
+                <div>✓ Sales overview</div>
+            </div>
+
+        </section>
+
+
+        <!-- Seller Login -->
+        <section class="seller-login-card">
+
+            <a href="index.html" class="seller-back">
+                ← Back to role selection
+            </a>
+
+            <p class="seller-small-title">SELLER ACCOUNT</p>
+
+            <h2>Welcome, Seller</h2>
+
+            <p class="seller-subtitle">
+                Sign in to manage your online store.
+            </p>
+
+
+            <form id="sellerLoginForm">
+
+                <!-- Email -->
+                <div class="seller-input-group">
+
+                    <label for="sellerEmail">
+                        Seller Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="sellerEmail"
+                        placeholder="seller@example.com"
+                    >
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="seller-input-group">
+
+                    <label for="sellerPassword">
+                        Password
+                    </label>
+
+                    <div class="seller-password-box">
+
+                        <input
+                            type="password"
+                            id="sellerPassword"
+                            placeholder="Enter your password"
+                        >
+
+                        <button
+                            type="button"
+                            id="sellerShowPassword"
+                        >
+                            Show
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Options -->
+                <div class="seller-options">
+
+                    <label>
+                        <input type="checkbox">
+                        Remember me
+                    </label>
+
+                    <a href="#" onclick="sellerForgotPassword(event)">
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+                <!-- Login -->
+                <button
+                    type="submit"
+                    class="seller-login-button"
+                >
+                    Seller Login
+                </button>
+
+
+                <p id="sellerMessage" class="seller-message"></p>
+
+            </form>
+
+
+            <div class="seller-note">
+                <strong>Demo project</strong>
+                <br>
+                Seller authentication is currently frontend-only.
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
